@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class SpawnAsteroid : MonoBehaviour
 {
-    public GameObject asteroid;
+    [SerializeField]
+    private GameObject asteroid;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

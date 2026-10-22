@@ -8,9 +8,8 @@ public class AsteoidTouchFloor : MonoBehaviour
         if (collision.gameObject.name == "Floor")
         {
             Destroy(gameObject);
-        }
-
-        if (collision.gameObject.name == "Player")
+        } 
+        else if (collision.gameObject.name == "Player")
         {
             Destroy(collision.gameObject);
         }

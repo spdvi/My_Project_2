@@ -13,6 +13,7 @@ public class AutodestroyAsteroid : MonoBehaviour
     {
         if (transform.position.y < -10f)
         {
+            Debug.Log("Asteroid Destroyed: " + gameObject.name);
             Destroy(gameObject);
         }    
     }
