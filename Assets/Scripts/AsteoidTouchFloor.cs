@@ -14,4 +14,14 @@ public class AsteoidTouchFloor : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        throw new NotImplementedException();
+    }
+
+    private void OnCollisionStay(Collision other)
+    {
+        throw new NotImplementedException();
+    }
 }

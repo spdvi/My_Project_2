@@ -21,7 +21,9 @@ public class PlayerLook : MonoBehaviour
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -30f, 30f);
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-
+        
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensivity * Time.deltaTime;
+        player.transform.Rotate(0, mouseX, 0);
 
         
         //Debug.Log(mouseY);
@@ -37,7 +39,6 @@ public class PlayerLook : MonoBehaviour
 
     private void LateUpdate()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensivity * Time.deltaTime;
-        player.transform.Rotate(0, mouseX, 0);
+
     }
 }
